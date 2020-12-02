@@ -91,8 +91,7 @@ void startMenu() {
 			break;
 
 		default:
-			printf("incorrect command\n\ttry again");
-			printCommands();
+			printf("incorrect command\n\ttry again\n");
 			break;
 		}
 	}

@@ -1,2 +1,4 @@
-﻿  main.c
+﻿  Menu.c
+D:\kejual projects\KillReal3\Menu.c(25,55): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
+D:\kejual projects\KillReal3\Menu.c(80,43): warning C4013: realloc: нет определения; предполагается "extern" с возвратом типа "int"
   KillReal3.vcxproj -> D:\kejual projects\KillReal3\Debug\KillReal3.exe
