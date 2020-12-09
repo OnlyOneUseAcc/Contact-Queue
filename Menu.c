@@ -16,12 +16,17 @@ void printCommands() {
 
 void startMenu() {
 	bool flag = true;
-	FILE* exFile;
-	exFile = fopen("D:\\kejual projects\\KillReal3\\storage.txt", "r+");
-
 	int n = 0;
-	fscanf(exFile, "%d", &n);
 
+	FILE* exFile;
+	exFile = fopen("storage.txt", "r+");
+	if (exFile == NULL) {
+		exFile = fopen("storage.txt", "w+");
+	}
+	else {
+		fscanf(exFile, "%d", &n);
+	}
+	
 	struct Contact* rawContacts = (struct Contact*)malloc(n * sizeof(struct Contact));
 	struct ContactQueue list = queueConstructor();
 
@@ -50,7 +55,7 @@ void startMenu() {
 			flag = false;
 			printf("goodbye");
 			fclose(exFile);
-			exFile = fopen("D:\\kejual projects\\KillReal3\\storage.txt", "w");
+			exFile = fopen("storage.txt", "w");
 			fprintf(exFile, "%d\n", list.count);
 
 			if (list.count > 0) {
